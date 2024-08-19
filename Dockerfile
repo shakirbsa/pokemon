@@ -9,7 +9,7 @@ COPY package*.json ./
 RUN npm config set registry https://registry.npmjs.org/
 # Install dependencies
 RUN npm install
-
+RUN npm install terser@3.14.1 --save-dev
 # Copy the rest of the application code
 COPY . .
 
